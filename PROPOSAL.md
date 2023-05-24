@@ -1,47 +1,44 @@
 # Project Name
 
+(TBD)
 
 ## Project Summary
 
-...
+A website that utilizes a login requirement before viewing the website,
+once logged in allows the users to view which movies are available in which regions
 
 ## Developers
 
-1. ...
+Zachary, Scheel
+Williamson, Grant
+Hendrick, Anson
+Henry, Dorian
 
-2. ...
+## What languages is it written with:
 
-3. ...
+javascript
+sql
+handlebars
 
-## Installation Instructions
+## What libraries are used:
 
-- Clone our repo to your computer
+sequalize
+mysql
+handlebars.js
+dotenv
+express-session
+express
 
-- ...
+## APIs:
 
-
-## Animated Gifs/Pictures of App
-
-- Place various screens of your app here after they have been built
-
-## Tech Stack
-
-- What languages is it written with: 
-
-- What libraries are used: 
-
-- Other: 
-
-
-## APIs
-
--
+ott api
+or
+Where can I watch by Kaso
 
 ## MVP (Minimum Viable Product)
 
--
-
+a website that shows movies, tv, etc based upon vpn location/filtered searches for specific regions
 
 ## Stretch Goals
 
--
+implementing a custom vpn into the website
