@@ -2,25 +2,25 @@
 
 (TBD)
 
-## Project Summary
+# Project Summary
 
 A website that utilizes a login requirement before viewing the website,
-once logged in allows the users to view which movies are available in which regions
+once logged in allows the users to view which movies are available in which regions of the world
 
-## Developers
+# Developers
 
-Zachary, Scheel
-Williamson, Grant
-Hendrick, Anson
-Henry, Dorian
+Zachary Scheel,
+Williamson Grant,
+Hendrick Anson,
+Henry Dorian,
 
-## What languages is it written with:
+# What languages is it written with:
 
-javascript
-sql
-handlebars
+javascript,
+sql,
+handlebars,
 
-## What libraries are used:
+# What libraries are used:
 
 sequalize
 mysql
@@ -29,16 +29,16 @@ dotenv
 express-session
 express
 
-## APIs:
+# APIs:
 
 ott api
 or
 Where can I watch by Kaso
 
-## MVP (Minimum Viable Product)
+# MVP (Minimum Viable Product)
 
 a website that shows movies, tv, etc based upon vpn location/filtered searches for specific regions
 
-## Stretch Goals
+# Stretch Goals
 
 implementing a custom vpn into the website
