@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS vpnUser_db;
+CREATE DATABASE vpnUser_db;
