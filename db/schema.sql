@@ -1,2 +1,8 @@
 DROP DATABASE IF EXISTS vpnUser_db;
 CREATE DATABASE vpnUser_db;
+CREATE TABLE Users (
+  Userid INT NOT NULL,
+  UserName VARCHAR(30) NOT NULL,
+  Password VARCHAR(30) NOT NULL,
+);
+
