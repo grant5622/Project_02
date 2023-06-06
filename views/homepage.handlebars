@@ -1,6 +1,27 @@
-<h1> MOVIES </h1>
 
-<div class="form-group">
-    <label for="movie-search">Insert movie/TV Show:</label>
-    <input class="form-input" type="text" id="movie-search" />
-  </div>
+<form id="movieForm">
+  <label for="title">Enter a movie title:</label>
+  <input type="text" id="title" name="title">
+
+  <label for="region">Select a region:</label>
+  <select id="region" name="region">
+    <option value="uk">UK</option>
+    <option value="us">US</option>
+    <option value="in">IN</option>
+  </select>
+
+  <button type="submit">Search</button>
+</form>
+
+<div id="results">
+  {{#each movies}}
+    <h3>Title: {{title}}</h3>
+    <p>Year: {{year}}</p>
+    <p>Streaming Services: {{#each streamingInfo}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    <hr>
+  {{/each}}
+
+  {{#if error}}
+    <p>{{error}}</p>
+  {{/if}}
+</div>
