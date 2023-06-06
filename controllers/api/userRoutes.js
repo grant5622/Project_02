@@ -36,6 +36,34 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// New signup route
+router.get('/signup', (req, res) => {
+  // Render the signup page
+  res.render('signup');
+});
+
+// New route to handle signup form submission
+router.post('/signup', async (req, res) => {
+  try {
+    // Create a new user in the database
+    const userData = await User.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password
+    });
+
+    // Create session variables for the signed-up user
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: 'You are now signed up and logged in!' });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
