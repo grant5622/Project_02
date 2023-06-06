@@ -31,4 +31,32 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.post('/login', async (req, res) => {
+  try {
+    // Extract name, email, and password from the request body
+    const { name, email, password } = req.body;
+
+    // Check if a user with the same email already exists
+    const existingUser = await User.findOne({ where: { email } });
+
+    if (existingUser) {
+      // If a user with the same email exists, display an error message
+      res.status(400).json({ message: 'An account with this information already exists, try logging in instead' });
+      return;
+    }
+
+    // Create a new user in the database
+    const userData = await User.create({ name, email, password });
+
+    // Create session variables for the signed-up user
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      res.json({ user: userData, message: 'You are now signed up and logged in!' });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
