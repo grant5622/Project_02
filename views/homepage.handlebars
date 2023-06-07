@@ -13,15 +13,5 @@
   <button type="submit">Search</button>
 </form>
 
-<div id="results">
-  {{#each movies}}
-    <h3>Title: {{title}}</h3>
-    <p>Year: {{year}}</p>
-    <p>Streaming Services: {{#each streamingInfo}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
-    <hr>
-  {{/each}}
+<div id="movieInfo"></div>
 
-  {{#if error}}
-    <p>{{error}}</p>
-  {{/if}}
-</div>
